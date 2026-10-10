@@ -1,0 +1,10 @@
+nl:
+  SilverShop\Colors\ShopColor:
+    SINGULARNAME: 'Kleur'
+    PLURALNAME: 'Kleuren'
+    HexDesc: 'Staalkleur getoond in kiezers en het kleurfilter.'
+  SilverShop\Colors\ColorableExtension:
+    COLOURS: 'Kleuren'
+    COLOURSDesc: 'Kleuren waarin dit artikel verkrijgbaar is. Meestal één; kies er meerdere voor een meerkleurig artikel (bijv. gestreept).'
+  SilverShop\Colors\ColorFacet:
+    TITLE: 'Kleur'

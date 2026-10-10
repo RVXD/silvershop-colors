@@ -1,0 +1,12 @@
+---
+Name: silvershop-colors
+After:
+  - '#silvershop'
+---
+SilverShop\Page\Product:
+  extensions:
+    - SilverShop\Colors\ColorableExtension
+
+SilverShop\Model\Variation\Variation:
+  extensions:
+    - SilverShop\Colors\ColorableExtension

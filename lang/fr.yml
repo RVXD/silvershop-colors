@@ -1,0 +1,10 @@
+fr:
+  SilverShop\Colors\ShopColor:
+    SINGULARNAME: 'Couleur'
+    PLURALNAME: 'Couleurs'
+    HexDesc: 'Échantillon de couleur affiché dans les sélecteurs et le filtre de couleur.'
+  SilverShop\Colors\ColorableExtension:
+    COLOURS: 'Couleurs'
+    COLOURSDesc: 'Couleurs dans lesquelles cet article est disponible. En général une ; plusieurs pour un article multicolore (p. ex. rayé).'
+  SilverShop\Colors\ColorFacet:
+    TITLE: 'Couleur'

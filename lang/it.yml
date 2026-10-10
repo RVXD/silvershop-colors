@@ -1,0 +1,10 @@
+it:
+  SilverShop\Colors\ShopColor:
+    SINGULARNAME: 'Colore'
+    PLURALNAME: 'Colori'
+    HexDesc: 'Campione di colore mostrato nei selettori e nel filtro colore.'
+  SilverShop\Colors\ColorableExtension:
+    COLOURS: 'Colori'
+    COLOURSDesc: 'Colori in cui questo articolo è disponibile. Di solito uno; scegline più di uno per un articolo multicolore (es. a righe).'
+  SilverShop\Colors\ColorFacet:
+    TITLE: 'Colore'

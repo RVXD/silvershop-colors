@@ -1,0 +1,10 @@
+en:
+  SilverShop\Colors\ShopColor:
+    SINGULARNAME: 'Colour'
+    PLURALNAME: 'Colours'
+    HexDesc: 'Swatch colour shown in pickers and the colour filter.'
+  SilverShop\Colors\ColorableExtension:
+    COLOURS: 'Colours'
+    COLOURSDesc: 'Colours this item comes in. Usually one; pick several for a multi-colour item (e.g. striped).'
+  SilverShop\Colors\ColorFacet:
+    TITLE: 'Colour'

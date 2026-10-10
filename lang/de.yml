@@ -1,0 +1,10 @@
+de:
+  SilverShop\Colors\ShopColor:
+    SINGULARNAME: 'Farbe'
+    PLURALNAME: 'Farben'
+    HexDesc: 'Farbfeld, angezeigt in Auswahlfeldern und im Farbfilter.'
+  SilverShop\Colors\ColorableExtension:
+    COLOURS: 'Farben'
+    COLOURSDesc: 'Farben, in denen dieser Artikel erhältlich ist. Meist eine; mehrere für ein mehrfarbiges Produkt (z. B. gestreift).'
+  SilverShop\Colors\ColorFacet:
+    TITLE: 'Farbe'

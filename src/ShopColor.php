@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace SilverShop\Colors;
 
 use SilverShop\Model\Variation\AttributeValue;
+use SilverStripe\Core\Convert;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 /**
  * A colour with a hex swatch. Extends {@link AttributeValue}, so one palette of ShopColors serves both as variation
@@ -27,6 +29,7 @@ class ShopColor extends AttributeValue
     ];
 
     private static array $summary_fields = [
+        'SwatchIndicator' => 'Colour',
         'Value' => 'Name',
         'Hex' => 'Hex',
     ];
@@ -43,6 +46,23 @@ class ShopColor extends AttributeValue
         }
 
         return $fields;
+    }
+
+    /**
+     * A small coloured square for the Colours admin list (summary field). Returns HTML (via DBHTMLText so the
+     * GridField renders it rather than escaping it); empty when no hex is set.
+     */
+    public function getSwatchIndicator(): DBHTMLText
+    {
+        $field = DBHTMLText::create('SwatchIndicator');
+        $swatch = $this->getSwatch();
+        if ($swatch) {
+            $style = 'display:inline-block;width:1.2em;height:1.2em;border-radius:0.2em;'
+                . 'border:1px solid rgba(0,0,0,0.3);vertical-align:middle;background:' . Convert::raw2att($swatch);
+            $field->setValue('<span style="' . $style . '"></span>');
+        }
+
+        return $field;
     }
 
     /**

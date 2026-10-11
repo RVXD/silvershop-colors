@@ -35,9 +35,9 @@ class ColorableExtension extends Extension
                 . 'For a product sold in different colours, add those as colour variations instead.'
             ));
 
-        // Hook into the scaffolding: replace the auto-generated Colours many_many GridField in place with the simple
-        // multi-select; fall back to the main tab if nothing was scaffolded.
-        if (!$fields->replaceField('Colours', $field)) {
+        // Drop the auto-scaffolded Colours tab/grid and show a simple multi-select on the main tab, after Model.
+        $fields->removeByName('Colours');
+        if (!$fields->insertAfter('Model', $field, false)) {
             $fields->addFieldToTab('Root.Main', $field);
         }
     }

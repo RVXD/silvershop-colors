@@ -8,3 +8,8 @@ After:
 SilverShop\Page\Product:
   extensions:
     - SilverShop\Colors\ColorableExtension
+
+# CMS-only: render colour swatches next to the product Colours listbox and the variation colour dropdown.
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - SilverShop\Colors\ColorCmsExtension

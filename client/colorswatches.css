@@ -1,0 +1,28 @@
+/* CMS-only styles for the colour-swatch decorator (ColorCmsExtension). Everything here targets classes that
+   colorswatches.js injects (.shop-color-swatch, .shop-color-select-wrap) — no overrides of core CMS elements. */
+
+/* The swatch itself: product Colours listbox (pills + dropdown results) and the variation colour dropdown. */
+.shop-color-swatch {
+    display: inline-block;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: 1em;
+    height: 1em;
+    min-width: 1em;
+    margin-right: 0.4em;
+    border-radius: 0.2em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    vertical-align: middle;
+}
+
+/* Variation "Shirt Colour" cell: the swatch, then the dropdown flowing to fill the cell like other columns. */
+.shop-color-select-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.shop-color-select-wrap select {
+    flex: 1 1 auto;
+    min-width: 0;
+}

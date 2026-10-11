@@ -15,4 +15,12 @@ class ShopColorTest extends SapphireTest
         $this->assertSame('#2980b9', ShopColor::create(['Value' => 'Blue', 'Hex' => '#2980b9'])->getSwatch());
         $this->assertNull(ShopColor::create(['Value' => 'Unset'])->getSwatch());
     }
+
+    public function testSwatchIndicatorRendersColourOrNothing(): void
+    {
+        $indicator = (string) ShopColor::create(['Value' => 'Red', 'Hex' => 'ff0000'])->getSwatchIndicator();
+        $this->assertStringContainsString('background:#ff0000', $indicator, 'admin list swatch carries the colour');
+
+        $this->assertSame('', (string) ShopColor::create(['Value' => 'Unset'])->getSwatchIndicator(), 'no swatch without a hex');
+    }
 }

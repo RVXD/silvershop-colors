@@ -33,14 +33,14 @@ class ColorFacetTest extends SapphireTest
         $mug->write();
         $mug->Colours()->add($this->red);
 
-        // Product whose variation is tagged Blue.
+        // Product whose variation carries Blue as its colour attribute value.
         $shirt = Product::create(['Title' => 'Blue-variation Shirt', 'BasePrice' => 20]);
         $shirt->write();
         $v = Variation::create(['ProductID' => $shirt->ID]);
         $v->write();
-        $v->Colours()->add($this->blue);
+        $v->AttributeValues()->add($this->blue);
 
-        // Product with a colour *variation* (ShopColor used as a variation attribute value).
+        // Product with a second colour variation (ShopColor used as a variation attribute value).
         $tee = Product::create(['Title' => 'Green-attr Tee', 'BasePrice' => 30]);
         $tee->write();
         $gv = Variation::create(['ProductID' => $tee->ID]);
@@ -48,13 +48,13 @@ class ColorFacetTest extends SapphireTest
         $gv->AttributeValues()->add($this->green);
     }
 
-    public function testMatchesDirectTagVariationTagAndColourVariation(): void
+    public function testMatchesProductTagAndColourVariation(): void
     {
         $this->seed();
         $facet = new ColorFacet();
 
         $this->assertSame(1, $facet->apply(Product::get(), [(string) $this->red->ID])->count(), 'direct product tag');
-        $this->assertSame(1, $facet->apply(Product::get(), [(string) $this->blue->ID])->count(), 'variation tag');
+        $this->assertSame(1, $facet->apply(Product::get(), [(string) $this->blue->ID])->count(), 'colour variation');
         $this->assertSame(1, $facet->apply(Product::get(), [(string) $this->green->ID])->count(), 'colour variation');
         $this->assertSame(
             2,

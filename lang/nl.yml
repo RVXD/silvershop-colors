@@ -5,6 +5,6 @@ nl:
     HexDesc: 'Staalkleur getoond in kiezers en het kleurfilter.'
   SilverShop\Colors\ColorableExtension:
     COLOURS: 'Kleuren'
-    COLOURSDesc: 'Kleuren waarin dit artikel verkrijgbaar is. Meestal één; kies er meerdere voor een meerkleurig artikel (bijv. gestreept).'
+    COLOURSDesc: 'De kleur(en) die dit product beschrijven — bijv. een rood shirt met blauwe mouwen. Voor een product dat in verschillende kleuren wordt verkocht, voeg die toe als kleurvariaties.'
   SilverShop\Colors\ColorFacet:
     TITLE: 'Kleur'

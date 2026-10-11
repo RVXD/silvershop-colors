@@ -3,10 +3,8 @@ Name: silvershop-colors
 After:
   - '#silvershop'
 ---
+# Product-level colours describe the product (e.g. a red shirt with blue sleeves). A variation's colour is its
+# "Shirt Colour" ATTRIBUTE (not a separate relation), so the extension is applied to Product only.
 SilverShop\Page\Product:
-  extensions:
-    - SilverShop\Colors\ColorableExtension
-
-SilverShop\Model\Variation\Variation:
   extensions:
     - SilverShop\Colors\ColorableExtension

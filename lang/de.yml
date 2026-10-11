@@ -5,6 +5,6 @@ de:
     HexDesc: 'Farbfeld, angezeigt in Auswahlfeldern und im Farbfilter.'
   SilverShop\Colors\ColorableExtension:
     COLOURS: 'Farben'
-    COLOURSDesc: 'Farben, in denen dieser Artikel erhältlich ist. Meist eine; mehrere für ein mehrfarbiges Produkt (z. B. gestreift).'
+    COLOURSDesc: 'Die Farbe(n), die dieses Produkt beschreiben — z. B. ein rotes Hemd mit blauen Ärmeln. Für ein Produkt, das in verschiedenen Farben verkauft wird, lege diese als Farbvarianten an.'
   SilverShop\Colors\ColorFacet:
     TITLE: 'Farbe'

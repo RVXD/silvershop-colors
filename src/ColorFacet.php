@@ -10,10 +10,10 @@ use SilverStripe\ORM\DataList;
 
 /**
  * Colour facet for silvershop/search, with swatch chips. Ships here and registers into the search FacetRegistry only
- * when silvershop/search is installed (see _config/search.yml). A product matches a colour when it, or any of its
- * variations, carries that colour — via the direct {@link ColorableExtension::Colours} tags (product and variation)
- * or a colour *variation* (`Variation.AttributeValues`). Since all three resolve to {@link ShopColor} ids, they merge
- * into one option per colour. Each option carries the colour's hex so the facet renders a swatch.
+ * when silvershop/search is installed (see _config/search.yml). A product matches a colour when it carries that
+ * colour as a product-level {@link ColorableExtension::Colours} tag, or when one of its variations has it as a colour
+ * attribute value (`Variation.AttributeValues`). Both resolve to {@link ShopColor} ids, so they merge into one option
+ * per colour. Each option carries the colour's hex so the facet renders a swatch.
  */
 class ColorFacet implements SearchFacet
 {
@@ -41,7 +41,6 @@ class ColorFacet implements SearchFacet
 
         return $products->filterAny([
             'Colours.ID' => $ids,
-            'Variations.Colours.ID' => $ids,
             'Variations.AttributeValues.ID' => $ids,
         ]);
     }

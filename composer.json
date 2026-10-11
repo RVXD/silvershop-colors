@@ -1,6 +1,6 @@
 {
     "name": "silvershop/colors",
-    "description": "Product colours for SilverShop: a hex-swatch colour palette, multi-colour tagging on any buyable (product or variation), and a colour facet for the storefront search.",
+    "description": "Product colours for SilverShop: a hex-swatch colour palette, product-level multi-colour tags, hex-valued colour variations, and a colour facet for the storefront search.",
     "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "silvershop", "ecommerce", "color", "colour", "swatch", "variations"],
     "license": "BSD-3-Clause",
@@ -24,6 +24,9 @@
     },
     "suggest": {
         "silvershop/search": "Adds a colour facet (with swatches) to the storefront product search."
+    },
+    "replace": {
+        "silvershop/coloredvariations": "*"
     },
     "repositories": [
         {

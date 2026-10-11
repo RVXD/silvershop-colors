@@ -5,6 +5,6 @@ es:
     HexDesc: 'Muestra de color mostrada en los selectores y el filtro de color.'
   SilverShop\Colors\ColorableExtension:
     COLOURS: 'Colores'
-    COLOURSDesc: 'Colores en los que está disponible este artículo. Normalmente uno; elige varios para un artículo multicolor (p. ej. de rayas).'
+    COLOURSDesc: 'El/los color(es) que describen este producto — p. ej. una camisa roja con mangas azules. Para un producto vendido en distintos colores, añádelos como variaciones de color.'
   SilverShop\Colors\ColorFacet:
     TITLE: 'Color'

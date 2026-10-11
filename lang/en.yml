@@ -5,6 +5,6 @@ en:
     HexDesc: 'Swatch colour shown in pickers and the colour filter.'
   SilverShop\Colors\ColorableExtension:
     COLOURS: 'Colours'
-    COLOURSDesc: 'Colours this item comes in. Usually one; pick several for a multi-colour item (e.g. striped).'
+    COLOURSDesc: 'The colour(s) that describe this product — e.g. a red shirt with blue sleeves. For a product sold in different colours, add those as colour variations instead.'
   SilverShop\Colors\ColorFacet:
     TITLE: 'Colour'

@@ -34,4 +34,20 @@ class ColorableExtension extends Extension
 
         $fields->addFieldToTab('Root.Main', $field);
     }
+
+    /**
+     * Inline-editable Colours column in the product's Variations grid, so each variation's colour(s) can be set
+     * without opening its detail form. GridFieldEditableColumns persists the many_many via the field's saveInto.
+     * Fired on the Product owner by SilverShop's ProductVariationsExtension.
+     *
+     * @param array<string, mixed> $displayFields
+     */
+    public function updateVariationEditableColumns(array &$displayFields): void
+    {
+        $displayFields['Colours'] = [
+            'title' => _t(self::class . '.COLOURS', 'Colours'),
+            'callback' => static fn ($record, $col, $grid): ListboxField =>
+                ListboxField::create('Colours', '', ShopColor::get()->map('ID', 'Value')->toArray()),
+        ];
+    }
 }
